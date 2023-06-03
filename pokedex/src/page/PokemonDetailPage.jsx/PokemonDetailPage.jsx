@@ -2,19 +2,16 @@ import { Header } from "../../components/Header/Header"
 import { PokemonCard } from "../../components/PokemonCard/PokemonCard";
 import { Footer } from "../../components/Footer/Footer";
 
-export const PokedexPage = () =>{
+export const PokemonDetailPage = () =>{
     return(
         <>
             <Header/>
             <main>
-                <h1>Meus Pokémons</h1>
+                <h1>Detalhes</h1>
                 <section>
-                    {/* Aqui será o map de myListThePokémons é dentro o <PokemonCard/>*/}
-                    <PokemonCard/>
+                    {/* I dont know! */}
                 </section>
             </main>
-            <Footer/>
         </>
-
     )
 }
