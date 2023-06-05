@@ -1,18 +1,19 @@
 import { Header } from "../../components/Header/Header"
 import { PokemonCard } from "../../components/PokemonCard/PokemonCard";
 import { Footer } from "../../components/Footer/Footer";
+import { MainContainer, Title, SectionPokemon } from "./PokemonListPageStyle";
 
 export const PokemonListPage = () => {
   return (
     <>
       <Header />
-      <main>
-        <h1>Todos os Pokémons</h1>
-        <section>
+      <MainContainer>
+        <Title>Todos os Pokémons</Title>
+        <SectionPokemon>
           {/* ! AQUI VAI O MAP DOS POKEMONS E DENTRO O COMPONENTE POKEMONCARD */}
           <PokemonCard/>
-        </section>
-      </main>
+        </SectionPokemon>
+      </MainContainer>
       <Footer/>
     </>
   );
