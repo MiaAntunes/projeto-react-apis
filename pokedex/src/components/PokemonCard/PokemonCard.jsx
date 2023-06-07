@@ -4,7 +4,7 @@ import { ArticleContainer, FirstContainer, SecondContainer, LinkFromDetail, Imag
 import teste from "../../assets/teste.png"
 
 
-export const PokemonCard = () =>{
+export const PokemonCard = (props) =>{
     const navigate = useNavigate()
     return(
         <>
@@ -19,7 +19,7 @@ export const PokemonCard = () =>{
             </FirstContainer>
             <SecondContainer>
                 <ImagePokemon src={teste} alt="" />
-                <Button>Capturar</Button> {/*Colocar uma Lógica aqui*/}
+                <Button style={{backgroundColor:props.buttonBackgroundColor, color:props.buttonColor}} >{props.buttonTitle}</Button>
             </SecondContainer>
         </ArticleContainer>
         <ArticleContainer>
@@ -33,7 +33,7 @@ export const PokemonCard = () =>{
             </FirstContainer>
             <SecondContainer>
                 <ImagePokemon src={teste} alt="" />
-                <Button>Capturar</Button> 
+                <Button style={{backgroundColor:props.buttonBackgroundColor, color:props.buttonColor}} >{props.buttonTitle}</Button>
             </SecondContainer>
         </ArticleContainer> {/* ! TESTE*/}
         <ArticleContainer>
@@ -47,7 +47,7 @@ export const PokemonCard = () =>{
             </FirstContainer>
             <SecondContainer>
                 <ImagePokemon src={teste} alt="" />
-                <Button>Capturar</Button> 
+                <Button style={{backgroundColor:props.buttonBackgroundColor, color:props.buttonColor}} >{props.buttonTitle}</Button>
             </SecondContainer>
         </ArticleContainer> {/* ! TESTE*/}
         </>

@@ -10,7 +10,7 @@ import teste5 from "../../assets/teste5.png"
 export const PokemonDetailPage = () => {
   return (
     <>
-      <Header />
+      <Header buttonTitle="Excluir" background="red" />
       <MainContainer>
         <Title>Detalhes</Title>
         <SectionPokemon>

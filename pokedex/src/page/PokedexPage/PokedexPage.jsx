@@ -6,12 +6,12 @@ import { MainContainer, Title, SectionPokemon } from "./PokedexPageStyle";
 export const PokedexPage = () =>{
     return(
         <>
-            <Header/>
+            <Header pokedexSecondButtonDisplay="none"  />
             <MainContainer>
                 <Title>Meus Pokémons</Title>
                 <SectionPokemon>
                     {/* Aqui será o map de myListThePokémons é dentro o <PokemonCard/>*/}
-                    <PokemonCard/>
+                    <PokemonCard buttonTitle="Excluir" buttonBackgroundColor="red" buttonColor="#fff" />
                 </SectionPokemon>
             </MainContainer>
             <Footer/>

@@ -4,13 +4,14 @@ import  logo  from "../../assets/Logo.png"
 import { HeaderContainer, ButtonListPokemon, Logo, ButtonPokedex } from "./HeaderStyle"
 
 
-export const Header = () =>{
+export const Header = (props) =>{
     const navigate = useNavigate()
     return(
         <HeaderContainer>
-            <ButtonListPokemon onClick={()=>{goToPageMain(navigate)}}>Todos Pokémons</ButtonListPokemon>
+            <ButtonListPokemon style={{display:props.homeFirstButtonDisplay}} onClick={()=>{goToPageMain(navigate)}}>Todos Pokémons</ButtonListPokemon>
             <Logo src={logo} alt="Logo do Pokémon" /> 
-            <ButtonPokedex onClick={()=>{goToPokedex(navigate)}}>Pokédex</ButtonPokedex>
+
+            <ButtonPokedex style={{backgroundColor:props.background, display:props.pokedexSecondButtonDisplay}} onClick={()=>{goToPokedex(navigate)}}>{props.buttonTitle}</ButtonPokedex>
             {/* <button>Excluir da Pokedéx</button> */}
         </HeaderContainer>
     )

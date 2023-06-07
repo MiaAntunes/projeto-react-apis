@@ -50,5 +50,6 @@ export const ImagePokemon = styled.img`
 export  const Button = styled.button`
     position:absolute;
     bottom:0;
-    width:calc(100% - 30px)
+    width:calc(100% - 30px);
+    color:#fff;
 `
