@@ -8,6 +8,7 @@ import teste5 from "../../assets/teste5.png"
 
 
 export const PokemonDetailPage = () => {
+  
   return (
     <>
       <Header buttonTitle="Excluir" background="red" />

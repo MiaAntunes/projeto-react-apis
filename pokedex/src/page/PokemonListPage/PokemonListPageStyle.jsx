@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.main`
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background: #5e5e5e;
+  padding:2em 0;
 `;
 //Coloque o width depois auto!
 
@@ -18,8 +19,9 @@ export const Title = styled.h1`
 export const SectionPokemon = styled.section `
   margin: 1em 2em;
   display: flex;
-  gap: 2em 1.5em;
+  gap: 5em 2em;
   max-width: 95vw;
   flex-wrap: wrap;
+  justify-content: center;
 `
 // testar o flex-wrap aqui!!
