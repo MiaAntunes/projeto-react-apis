@@ -4,7 +4,6 @@ import background from "../../assets/background.png"
 export const ArticleContainer = styled.article`
     width: 30vw;
     height: 18vh;
-    background: #729F92;
     border-radius: 12px;
 
     background-image: url(${background});
@@ -13,6 +12,23 @@ export const ArticleContainer = styled.article`
 
     display: flex;
     justify-content: space-between;
+    background-color: ${props =>{
+        switch(props.elementoType){
+            case "grass":
+                return "#729F92"
+            case "fire":
+                return "#EAAB7D"
+            case "water":
+                return "#71C3FF"
+            case "bug":
+                return "#76A866"
+            case "normal":
+                return "#BF9762"
+            default:
+                return "black"
+          }
+        
+    }}
 `
 
 export const FirstContainer = styled.div`
@@ -44,7 +60,8 @@ export const SecondContainer = styled.div`
 
 export const ImagePokemon = styled.img`
     position:absolute;
-    bottom:50px;
+    bottom:70px;
+    width:180px;
 `
 //Duvidas com esse position !!!!!
 export  const Button = styled.button`

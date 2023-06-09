@@ -1,15 +1,12 @@
-import { Header } from "./components/Header/Header"
-import { PokemonListPage } from "./page/PokemonListPage/PokemonListPage"
-import { PokedexPage } from "./page/PokedexPage/PokedexPage"
-import { PokemonDetailPage } from "./page/PokemonDetailPage/PokemonDetailPage"
 import { Router } from "./router/Router"
 import { GlobalStyle } from "./GlobalStyle"
+import { ChakraProvider } from "@chakra-ui/react"
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
-      <Router/>
+        <GlobalStyle/>
+        <Router/>
     </>
   )
 }
