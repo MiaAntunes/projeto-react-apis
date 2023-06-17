@@ -34,5 +34,5 @@ export const useRequestData = (stateInicial) =>{
     },[])
 
 
-    return [data, receberDados]
+    return [data,setData, receberDados]
 }
