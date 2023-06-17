@@ -5,27 +5,36 @@ import teste1 from "../../assets/teste.png"
 import teste2 from "../../assets/teste2.png"
 import teste3 from "../../assets/teste3.png"
 import teste5 from "../../assets/teste5.png"
+import { useContext } from "react";
+import { GlobalContext } from "../../contexts/GlobalContext";
+import { imageElementPokemon } from "../../utils/imageElementPokemon";
 
 
-export const PokemonDetailPage = () => {
+export const PokemonDetailPage = (props) => {
+  const context = useContext(GlobalContext)
+  const {detailPokemon} = context
+
+  const elementPokemon = detailPokemon.types.map((type, index)=>{
+    return <img key={index} src={imageElementPokemon(type.type.name)} alt={type.name} />
+ })
   
   return (
     <>
-      <Header buttonTitle="Excluir" background="red" />
+      <Header pokemon={detailPokemon} buttonTitle="Excluir" background="red" />
       <MainContainer>
         <Title>Detalhes</Title>
         <SectionPokemon>
             <FirstContainer>
-              <img src={teste2} alt="" />
-              <img src={teste3} alt="" />
+              <img src={detailPokemon.sprites.front_default} alt={detailPokemon.name} />
+              <img src={detailPokemon.sprites.back_default} alt={detailPokemon.name} />
             </FirstContainer>
             <SecondContainer>
-              <img src={teste5} alt="" />
+              <img src={teste3} alt="" />
             </SecondContainer>
             <ThirstContainer>
-                <p>#01</p>
-                <h2>Bulbasaur</h2>
-                <span>Lógica</span>
+                <p>#{detailPokemon.id}</p>
+                <h2>{detailPokemon.name.charAt(0).toUpperCase()+detailPokemon.name.slice(1)}</h2>
+                <span>{elementPokemon}</span>
                 <div>
                     <h3>Moves: </h3>
                     <img src="" alt="" />
@@ -34,7 +43,7 @@ export const PokemonDetailPage = () => {
                 </div>
             </ThirstContainer>
             <FourthContainer>
-                <ImagePokemon src={teste1} alt="" />
+                <ImagePokemon src={detailPokemon.sprites.other["official-artwork"].front_default} alt="" />
             </FourthContainer>
         </SectionPokemon>
       </MainContainer>

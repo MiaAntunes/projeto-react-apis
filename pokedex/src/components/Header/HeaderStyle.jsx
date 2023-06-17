@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
     align-items: center;
     justify-content: space-around;
     background:#fff;
+    position: relative;
 `;
 
 export const ButtonListPokemon = styled.button`
@@ -36,4 +37,4 @@ export const ButtonPokedex = styled.button`
     color: #FFF;
     position: absolute;
     right:10%;
-`
+` 
