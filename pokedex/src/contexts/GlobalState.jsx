@@ -6,15 +6,14 @@ export const GlobalState = (props) =>{
     const [myPokedex, setMyPokedex] = useState([])
     const [eachPokemon, setEachPokemon] = useRequestData([]);
     const [detailPokemon,setDetailPokemon] = useState({})
+    const [modalPokemon, setModalPokemon] = useState(false)
+    const [modalStatus, setModalStatus] = useState()
 
     const catchPokemon = (element) => {
         const findPokemon = eachPokemon.find((pokemon) => pokemon.id === element);
         setMyPokedex([...myPokedex,findPokemon])
-
-        const findRepeatPokemon = myPokedex.find((pokemon)=>pokemon.id === element)
-        if(findRepeatPokemon){
-          alert("Pokemon já capturado")
-        }
+        setModalPokemon(true)
+        setModalStatus(0)
     }
     
     const deletePokemonPokedexPage = (element) =>{
@@ -22,6 +21,8 @@ export const GlobalState = (props) =>{
         return pokemon.id !== element
       })
       setMyPokedex(deletePokemonPokedex)
+      setModalPokemon(true)
+      setModalStatus(1)
   }
 
     const context = {
@@ -31,7 +32,11 @@ export const GlobalState = (props) =>{
         eachPokemon,
         deletePokemonPokedexPage,
         detailPokemon,
-        setDetailPokemon
+        setDetailPokemon,
+        modalPokemon,
+        setModalPokemon, 
+        modalStatus,
+        setModalStatus
     }
 
     return(

@@ -1,6 +1,9 @@
 import {
   ArticleContainer,
   FirstContainer,
+  PokemonId,
+  PokemonName,
+  TypesPokemon,
   SecondContainer,
   LinkFromDetail,
   ImagePokemon,
@@ -17,6 +20,7 @@ export const PokemonCard = (props) => {
   const context = useContext(GlobalContext)
   const {catchPokemon,deletePokemonPokedexPage,detailPokemon,setDetailPokemon} = context
 
+
   const elementPokemon = props.elementoType.map((type, index)=>{
      return <img key={index} src={imageElementPokemon(type.type.name)} alt={type.name} />
   })
@@ -27,16 +31,15 @@ export const PokemonCard = (props) => {
   };
 
 
-
 // Da um loop quando não colocado arrow function
   return (
     <>
           <ArticleContainer elementoType={props.elementoType[0].type.name}>
             <FirstContainer>
               <div>
-                <p>#{props.pokemon.id}</p>
-                <h2>{props.pokemon.name.charAt(0).toUpperCase() + props.pokemon.name.slice(1)}</h2>
-                <span>{elementPokemon}</span>
+                <PokemonId>#{props.pokemon.id}</PokemonId>
+                <PokemonName>{props.pokemon.name.charAt(0).toUpperCase() + props.pokemon.name.slice(1)}</PokemonName>
+                <TypesPokemon>{elementPokemon}</TypesPokemon>
               </div>
               <LinkFromDetail
                 href="#"
@@ -52,19 +55,18 @@ export const PokemonCard = (props) => {
               {
                 location.pathname === "/home"?
                 <Button
-                style={{
-                  backgroundColor: props.buttonBackgroundColor,
-                  color: props.buttonColor,
-                }} onClick={()=>catchPokemon(props.pokemon.id) }
+                backgroundColor="#fff"
+                fontColor = "#000"
+                onClick={()=>catchPokemon(props.pokemon.id) }
               >
-                Capturar
+                Capturar!
               </Button>
+              // <Modal/>
               :
               <Button
-                style={{
-                  backgroundColor: props.buttonBackgroundColor,
-                  color: props.buttonColor,
-                }} onClick={()=>deletePokemonPokedexPage(props.pokemon.id) }
+              backgroundColor="#FF6262"
+              fontColor = "#fff"
+              onClick={()=>deletePokemonPokedexPage(props.pokemon.id) }
               >
                 Excluir
               </Button>

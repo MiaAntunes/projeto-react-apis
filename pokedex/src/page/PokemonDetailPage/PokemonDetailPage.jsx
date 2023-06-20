@@ -1,50 +1,166 @@
+import {
+  MainContainer,
+  Title,
+  SectionPokemon,
+  FirstContainer,
+  SecondContainer,
+  SecondContainerTitle,
+  SecondContainerBaseStats,
+  BaseStatsContentName,
+  BaseStatsContentValue,
+  BaseStatsName,
+  BaseStatsValue,
+  ThirstContainer,
+  ThirstContainerMoves,
+  PokemonId,
+  PokemonName,
+  TypesPokemon,
+  TypeImage,
+  FourthContainer,
+  ImagePokemon,
+  FirstContainerImage,
+  MovesTitle,
+  MovesContainer,
+  MovesText,
+  BaseStatsValueTotal,
+  FirstContent,
+} from "./PokemonDetailStyle";
 import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
-import { MainContainer, Title, SectionPokemon, FirstContainer, SecondContainer, ThirstContainer, FourthContainer, ImagePokemon } from "./PokemonDetailStyle";
-import teste1 from "../../assets/teste.png"
-import teste2 from "../../assets/teste2.png"
-import teste3 from "../../assets/teste3.png"
-import teste5 from "../../assets/teste5.png"
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { imageElementPokemon } from "../../utils/imageElementPokemon";
+import { Progress, Stack } from "@chakra-ui/react";
 
+export const PokemonDetailPage = () => {
+  const context = useContext(GlobalContext);
+  const { detailPokemon } = context;
 
-export const PokemonDetailPage = (props) => {
-  const context = useContext(GlobalContext)
-  const {detailPokemon} = context
+  const elementPokemon = detailPokemon.types.map((type, index) => {
+    return (
+      <TypeImage
+        key={index}
+        src={imageElementPokemon(type.type.name)}
+        alt={type.name}
+      />
+    );
+  });
 
-  const elementPokemon = detailPokemon.types.map((type, index)=>{
-    return <img key={index} src={imageElementPokemon(type.type.name)} alt={type.name} />
- })
-  
+  const colorValueBaseStats = (value) =>{
+    if (value <= 49) {
+      return "red";
+    } else if (value <= 79) {
+      return "yellow";
+    } else if (value >= 80) {
+      return "green";
+    }
+  }
+
+  const valueTotalBaseStats = detailPokemon.stats.reduce((valueInicial, valueAtual) => valueInicial + valueAtual.base_stat, 0)
+
+  console.log(valueTotalBaseStats)
+
   return (
     <>
       <Header pokemon={detailPokemon} buttonTitle="Excluir" background="red" />
       <MainContainer>
         <Title>Detalhes</Title>
-        <SectionPokemon>
-            <FirstContainer>
-              <img src={detailPokemon.sprites.front_default} alt={detailPokemon.name} />
-              <img src={detailPokemon.sprites.back_default} alt={detailPokemon.name} />
-            </FirstContainer>
-            <SecondContainer>
-              <img src={teste3} alt="" />
-            </SecondContainer>
-            <ThirstContainer>
-                <p>#{detailPokemon.id}</p>
-                <h2>{detailPokemon.name.charAt(0).toUpperCase()+detailPokemon.name.slice(1)}</h2>
-                <span>{elementPokemon}</span>
-                <div>
-                    <h3>Moves: </h3>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                </div>
-            </ThirstContainer>
-            <FourthContainer>
-                <ImagePokemon src={detailPokemon.sprites.other["official-artwork"].front_default} alt="" />
-            </FourthContainer>
+        <SectionPokemon elementoType={detailPokemon.types[0].type.name}>
+          <FirstContainer>
+            <FirstContent>
+              <FirstContainerImage
+              src={detailPokemon.sprites.versions["generation-v"]["black-white"].animated.front_default}
+              alt={detailPokemon.name}
+            />
+            </FirstContent>
+            <FirstContent>
+              <FirstContainerImage
+              src={detailPokemon.sprites.versions["generation-v"]["black-white"].animated.back_default}
+              alt={detailPokemon.name}
+            />
+            </FirstContent>
+            
+            
+          </FirstContainer>
+          <SecondContainer>
+            <SecondContainerTitle>Base Stats</SecondContainerTitle>
+            {detailPokemon.stats.map((stat, index) => {
+              console.log(stat)
+              return (
+                <>
+                  <SecondContainerBaseStats key={index}>
+                    <BaseStatsContentName>
+                      <BaseStatsName>
+                        {stat.stat.name.charAt(0).toUpperCase() +
+                          stat.stat.name.slice(1)}
+                      </BaseStatsName>
+                    </BaseStatsContentName>
+                    <BaseStatsContentValue>
+                      <BaseStatsValue>{stat.base_stat}</BaseStatsValue>
+                    </BaseStatsContentValue>
+                    <Stack w="100px" spacing={5}>
+                      <Progress
+                        colorScheme={colorValueBaseStats(stat.base_stat)}
+                        borderRadius="8px"
+                        size="md"
+                        value={stat.base_stat}
+                      />
+                    </Stack>
+                  </SecondContainerBaseStats>
+                </>
+              );
+            })}
+            <SecondContainerBaseStats>
+              <BaseStatsContentName>
+                <BaseStatsName>Total</BaseStatsName>
+              </BaseStatsContentName>
+              <BaseStatsValueTotal>
+                <BaseStatsValueTotal>{valueTotalBaseStats}</BaseStatsValueTotal>
+              </BaseStatsValueTotal>
+            </SecondContainerBaseStats>
+          </SecondContainer>
+          <ThirstContainer>
+            <PokemonId>#{detailPokemon.id}</PokemonId>
+            <PokemonName>
+              {detailPokemon.name.charAt(0).toUpperCase() +
+                detailPokemon.name.slice(1)}
+            </PokemonName>
+            <TypesPokemon>{elementPokemon}</TypesPokemon>
+            <ThirstContainerMoves>
+              <MovesTitle>Moves: </MovesTitle>
+              <MovesContainer>
+                <MovesText>
+                  {detailPokemon.moves[0].move.name.charAt(0).toUpperCase() +
+                    detailPokemon.moves[0].move.name.slice(1)}
+                </MovesText>
+              </MovesContainer>
+              <MovesContainer>
+                <MovesText>
+                  {detailPokemon.moves[1].move.name.charAt(0).toUpperCase() +
+                    detailPokemon.moves[1].move.name.slice(1)}
+                </MovesText>
+              </MovesContainer>
+              <MovesContainer>
+                <MovesText>
+                  {detailPokemon.moves[2].move.name.charAt(0).toUpperCase() +
+                    detailPokemon.moves[2].move.name.slice(1)}
+                </MovesText>
+              </MovesContainer>
+              <MovesContainer>
+                <MovesText>
+                  {detailPokemon.moves[3].move.name.charAt(0).toUpperCase() +
+                    detailPokemon.moves[3].move.name.slice(1)}
+                </MovesText>
+              </MovesContainer>
+            </ThirstContainerMoves>
+          </ThirstContainer>
+          <FourthContainer>
+            <ImagePokemon
+              src={
+                detailPokemon.sprites.other["official-artwork"].front_default
+              }
+              alt=""
+            />
+          </FourthContainer>
         </SectionPokemon>
       </MainContainer>
     </>

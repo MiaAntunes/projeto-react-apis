@@ -1,17 +1,19 @@
 import { Router } from "./router/Router"
 import { GlobalStyle } from "./GlobalStyle"
-import { ChakraProvider } from "@chakra-ui/react"
 import { GlobalState } from "./contexts/GlobalState"
+import { ChakraProvider } from "@chakra-ui/react"
+import { ModalPokemon } from "./components/Modal/Modal"
 
 function App() {
   return (
     <>
-     <ChakraProvider>
      <GlobalState>
          <GlobalStyle/>
+         <ChakraProvider>
          <Router/>
+         <ModalPokemon/>
+         </ChakraProvider>
       </GlobalState>
-     </ChakraProvider>
     </>
   )
 }

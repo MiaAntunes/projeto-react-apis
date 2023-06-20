@@ -6,6 +6,7 @@ import {
   ButtonListPokemon,
   Logo,
   ButtonPokedex,
+  ButtonDetail
 } from "./HeaderStyle";
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -14,11 +15,11 @@ export const Header = (props) => {
   const context = useContext(GlobalContext);
   const { myPokedex, deletePokemonPokedexPage, catchPokemon } = context;
   const navigate = useNavigate();
+
   const findPokemon = myPokedex.find((pokemon) => {
     return pokemon.id === props.pokemon.id;
   });
-  // console.log(props)
-  console.log(findPokemon);
+
   return (
     <HeaderContainer>
       {location.pathname.includes("pokedex") ||
@@ -32,10 +33,7 @@ export const Header = (props) => {
         </ButtonListPokemon>
       ) : (
         <ButtonPokedex
-          style={{
-            backgroundColor: "blue",
-            color: props.buttonColor,
-          }}
+          backgroundColor="#33A4F5"
           onClick={() => {
             goToPokedex(navigate);
           }}
@@ -48,25 +46,19 @@ export const Header = (props) => {
 
       {location.pathname.includes("detail") &&
         (!findPokemon ? (
-          <ButtonPokedex
-            style={{
-              backgroundColor: "blue",
-              color: props.buttonColor,
-            }}
+          <ButtonDetail
+            backgroundColor="#33A4F5"
             onClick={() => catchPokemon(props.pokemon.id)}
           >
            Adicionar a Pokedex
-          </ButtonPokedex>
+          </ButtonDetail>
         ) : (
-          <ButtonPokedex
-            style={{
-              backgroundColor: "red",
-              color: props.buttonColor,
-            }}
+          <ButtonDetail
+            backgroundColor="#FF6262"
             onClick={() => deletePokemonPokedexPage(props.pokemon.id)}
           >
             Remover da Pokedex
-          </ButtonPokedex>
+          </ButtonDetail>
         ))
         //só vai acontecer quand estiver na página DETAIL!!!!!!!
         }
