@@ -101,6 +101,7 @@ export const SectionPokemon = styled.section`
 
   @media screen and (min-width: 2000px) {
     max-width: 60vw;
+    height: auto;
   }
 `;
 
