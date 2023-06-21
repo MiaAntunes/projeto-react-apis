@@ -25,7 +25,7 @@ export const imageElementPokemon = (element) => {
       return dark;
     case "dragon":
       return dragon;
-    case "eletric":
+    case "electric":
       return eletric;
     case "fairy":
       return fairy;

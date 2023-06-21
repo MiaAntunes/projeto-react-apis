@@ -16,7 +16,7 @@ export const Title = styled.h1`
   color: #fff;
   padding: 1em;
 
-  @media screen and (min-width: 280px) and (max-width: 350px){
+  @media screen and (min-width: 280px) and (max-width: 450px){
     font-size:1.3em;
   }
 
@@ -33,7 +33,7 @@ export const SectionPokemon = styled.section`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media screen and (min-width: 280px) and (max-width: 350px){
+  @media screen and (min-width: 280px) and (max-width: 450px){
     gap:3em;
   }
 `;
