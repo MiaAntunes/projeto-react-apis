@@ -4,7 +4,7 @@ export const goToPokedex = (navigate)=>{
 }
 
 export const goToPageMain = (navigate)=>{
-    navigate("/home")
+    navigate("/")
 }
 
 export const goToDetailPokemon = (navigate, name)=>{
