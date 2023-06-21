@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { GlobalStyle } from "../../GlobalStyle";
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -22,7 +21,7 @@ export const ButtonListPokemon = styled.button`
   left: 5%;
   
   
-  @media screen and (min-width: 280px) and (max-width: 350px){
+  @media screen and (min-width: 280px) and (max-width: 450px){
     font-size: .5em;
     left: 3%;
   }
@@ -38,9 +37,13 @@ export const Logo = styled.img`
   position: absolute;
   left: 45%;
 
-  @media screen and (min-width: 280px) and (max-width: 350px){
+  @media screen and (min-width: 280px) and (max-width: 450px){
     width:22vw;
     left: 42%;
+  }
+
+  @media screen and (min-width: 451px) and (max-width: 900px) {
+    left: 36%;
   }
 
   @media screen and (min-width: 2000px) {
@@ -59,7 +62,7 @@ export const ButtonPokedex = styled.button`
   right: 8%;
   background-color:${props=>(props.backgroundColor)};
 
-  @media screen and (min-width: 280px) and (max-width: 350px) {
+  @media screen and (min-width: 280px) and (max-width: 450px) {
     width: 15vw;
     height: 4vh;
     font-size: .6em;
@@ -71,6 +74,7 @@ export const ButtonPokedex = styled.button`
     font-size:0.9em;
   }
 `;
+
 export const ButtonDetail = styled.button`
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -82,7 +86,7 @@ export const ButtonDetail = styled.button`
   right: 8%;
   background-color:${props=>(props.backgroundColor)};
 
-  @media screen and (min-width: 280px) and (max-width: 350px){
+  @media screen and (min-width: 280px) and (max-width: 450px){
     width: 18vw;
     height: 4vh;
     font-size: .5em;

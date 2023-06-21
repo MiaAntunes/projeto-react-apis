@@ -17,13 +17,13 @@ export const ModalPokemon = () => {
     context;
 
   const Title = styled.h1`
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: 'Poppins';
     font-weight: 700;
   `;
 
   const Text = styled.p`
-    font-size: 1em;
+    font-size: .7em;
     font-family: 'Poppins';
     font-weight: 700;
   `
@@ -59,7 +59,7 @@ export const ModalPokemon = () => {
                   gap={".5em"}
                 >
                   <Title>Gotcha!</Title>
-                  <Text fontWeight="bold" mb="1rem">
+                  <Text>
                     O Pokémon foi adicionado a sua Pokédex
                   </Text>
                 </ModalBody>

@@ -6,8 +6,7 @@ import {
   SecondContainer,
   SecondContainerTitle,
   SecondContainerBaseStats,
-  BaseStatsContentName,
-  BaseStatsContentValue,
+  BaseStatsContent,
   BaseStatsName,
   BaseStatsValue,
   ThirstContainer,
@@ -24,6 +23,7 @@ import {
   MovesText,
   BaseStatsValueTotal,
   FirstContent,
+  LineBaseStats,
 } from "./PokemonDetailStyle";
 import { Header } from "../../components/Header/Header";
 import { useContext } from "react";
@@ -88,33 +88,32 @@ export const PokemonDetailPage = () => {
               return (
                 <>
                   <SecondContainerBaseStats key={index}>
-                    <BaseStatsContentName>
+                    <BaseStatsContent>
                       <BaseStatsName>
                         {stat.stat.name.charAt(0).toUpperCase() +
                           stat.stat.name.slice(1)}
                       </BaseStatsName>
-                    </BaseStatsContentName>
-                    <BaseStatsContentValue>
                       <BaseStatsValue>{stat.base_stat}</BaseStatsValue>
-                    </BaseStatsContentValue>
-                    <Stack w="100px" spacing={5}>
+                    </BaseStatsContent>
+                  </SecondContainerBaseStats>
+                  <Stack w="100%" spacing={3}>
                       <Progress
                         colorScheme={colorValueBaseStats(stat.base_stat)}
-                        borderRadius="8px"
-                        size="md"
+                        borderRadius="5px"
+                        size="sm"
                         value={stat.base_stat}
                       />
-                    </Stack>
-                  </SecondContainerBaseStats>
+                  </Stack>
+                  <LineBaseStats/>
                 </>
               );
             })}
             <SecondContainerBaseStats>
-              <BaseStatsContentName>
+              <BaseStatsContent>
                 <BaseStatsName>Total</BaseStatsName>
-              </BaseStatsContentName>
-              <BaseStatsValueTotal>
                 <BaseStatsValueTotal>{valueTotalBaseStats}</BaseStatsValueTotal>
+              </BaseStatsContent>
+              <BaseStatsValueTotal>
               </BaseStatsValueTotal>
             </SecondContainerBaseStats>
           </SecondContainer>
