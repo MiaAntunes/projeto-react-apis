@@ -7,26 +7,15 @@ import {
   Flex,
   Container,
 } from "@chakra-ui/react";
+import { Title, Text } from "./ModalStyles";
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
-import styled from "styled-components";
 
 export const ModalPokemon = () => {
   const context = useContext(GlobalContext);
   const { modalPokemon, setModalPokemon, modalStatus, setModalStatus } =
     context;
 
-  const Title = styled.h1`
-    font-size: 2em;
-    font-family: 'Poppins';
-    font-weight: 700;
-  `;
-
-  const Text = styled.p`
-    font-size: .7em;
-    font-family: 'Poppins';
-    font-weight: 700;
-  `
 
   return (
     <>

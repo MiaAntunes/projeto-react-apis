@@ -57,7 +57,6 @@ export const PokemonDetailPage = () => {
 
   const valueTotalBaseStats = detailPokemon.stats.reduce((valueInicial, valueAtual) => valueInicial + valueAtual.base_stat, 0)
 
-  console.log(valueTotalBaseStats)
 
   return (
     <>
@@ -84,10 +83,10 @@ export const PokemonDetailPage = () => {
           <SecondContainer>
             <SecondContainerTitle>Base Stats</SecondContainerTitle>
             {detailPokemon.stats.map((stat, index) => {
-              console.log(stat)
+              // Fazer uma div para utilizar o key, pois se não irá dar error!
               return (
                 <>
-                  <SecondContainerBaseStats key={index}>
+                  <SecondContainerBaseStats >
                     <BaseStatsContent>
                       <BaseStatsName>
                         {stat.stat.name.charAt(0).toUpperCase() +

@@ -5,7 +5,7 @@ import backgroundSmall from "../../assets/background.png";
 export const MainContainer = styled.main`
   display:flex;
   flex-direction:column;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-color: #5e5e5e;
 
@@ -38,7 +38,7 @@ export const SectionPokemon = styled.section`
   margin: 1em 2em;
   display: flex;
   align-self:center;
-  height: 60vh;
+  height: auto;
   padding: 2.5em;
   gap: 0 4em;
   color: #fff;

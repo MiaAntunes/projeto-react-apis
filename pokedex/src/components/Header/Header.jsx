@@ -60,7 +60,6 @@ export const Header = (props) => {
             Remover da Pokedex
           </ButtonDetail>
         ))
-        //só vai acontecer quand estiver na página DETAIL!!!!!!!
         }
     </HeaderContainer>
   );
