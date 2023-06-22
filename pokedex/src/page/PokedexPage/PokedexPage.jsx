@@ -8,7 +8,6 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 export const PokedexPage = () => {
   const context = useContext(GlobalContext);
   const { myPokedex, detailPokemon } = context;
-  console.log(myPokedex);
 
   return (
     <>
@@ -17,7 +16,6 @@ export const PokedexPage = () => {
         <Title>Meus Pokémons</Title>
         <SectionPokemon>
           {myPokedex.map((pokemon, index) => {
-            console.log(pokemon);
             return (
               <PokemonCard
                 buttonBackgroundColor="red"

@@ -53,7 +53,7 @@ export const PokemonCard = (props) => {
             <SecondContainer>
               <ImagePokemon src={props.pokemon.sprites.other["official-artwork"].front_default} alt={props.pokemon.name} />
               {
-                location.pathname === "/home"?
+                location.pathname === "/"?
                 <Button
                 backgroundColor="#fff"
                 fontColor = "#000"

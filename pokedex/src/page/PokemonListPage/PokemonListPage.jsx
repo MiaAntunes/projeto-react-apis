@@ -10,8 +10,6 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 export const PokemonListPage = () => {
   const context = useContext(GlobalContext)
   const {eachPokemon,myPokedex,detailPokemon} = context
-  console.log(myPokedex)
-
 
   return (
     <>
