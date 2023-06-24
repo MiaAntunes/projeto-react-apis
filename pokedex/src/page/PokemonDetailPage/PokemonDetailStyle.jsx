@@ -5,7 +5,7 @@ import backgroundSmall from "../../assets/background.png";
 export const MainContainer = styled.main`
   display:flex;
   flex-direction:column;
-  height: auto;
+  min-height: 150vh;
   width: 100vw;
   background-color: #5e5e5e;
 
@@ -19,18 +19,60 @@ export const MainContainer = styled.main`
 //Coloque o width depois auto!
 
 export const Title = styled.h1`
-  font-family: "Poppins";
+font-family: "Poppins";
   font-weight: 700;
-  font-size: 2.5em;
-  color: #fff;
-  padding: 1em;
+  font-size: 1.2em;
+  color:#fff;
+  padding: .8em;
 
-  @media screen and (min-width: 280px) and (max-width: 450px) {
-    font-size:1.3em;
+  @media screen and (min-width: 450px) and (max-width: 600px){
+    font-size: 1.3em;
+    padding: .95em;
   }
 
-  @media screen and (min-width: 2000px) {
+  @media screen and (min-width: 601px) and (max-width: 800px){
+    font-size: 1.3em;
+    padding: .95em;
+  }
+
+  @media screen and (min-width: 801px) and (max-width: 1000px){
+    font-size: 1.3em;
+    padding: 1em;
+  }
+
+  @media screen and (min-width: 1001px) and (max-width: 1200px){
+    font-size: 1.4em;
+    padding: 1em;
+  }
+
+  @media screen and (min-width: 1201px) and (max-width: 1400px){
+    font-size: 1.4em;
+    padding: 1em;
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1600px){
+    font-size: 1.5em;
+    padding: 1em;
+  }
+
+  @media screen and (min-width: 1800px) and (max-width: 2000px){
     font-size: 1.9em;
+    padding: 1.5em;
+  }
+
+  @media screen and (min-width: 2001px) and (max-width: 2500px){
+    font-size: 1.9em;
+    padding: 1.5em;
+  }
+
+  @media screen and (min-width: 2501px) and (max-width: 3000px){
+    font-size: 1.9em;
+    padding: 1.5em;
+  }
+
+  @media screen and (min-width: 3000px) {
+    font-size: 1.95em;
+    padding: 1.5em;
   }
 `;
 
@@ -99,17 +141,37 @@ export const SectionPokemon = styled.section`
     gap: 0 1.5em;
   }
 
-  @media screen and (min-width: 2000px) {
-    max-width: 60vw;
+  @media screen and (min-width: 1201px) and (max-width: 1400px){
+
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1600px){
+
+  }
+
+  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  height: 65vh;
+  }
+
+  @media screen and (min-width: 2001px) and (max-width: 2500px){
+    height: 70vh;
+  }
+
+  @media screen and (min-width: 2501px) and (max-width: 3000px){
+    height: 70vh;
+  }
+
+  @media screen and (min-width: 3000px) {
+    height: 70vh;
   }
 `;
 
 export const FirstContainer = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 20%;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
     width:10vw;
@@ -120,10 +182,10 @@ export const FirstContent = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 19vw;
   height: 40%;
   background-color: #fff;
   border-radius: 20px;
+  width: 100%;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
     width:10vw;
@@ -136,7 +198,7 @@ export const FirstContent = styled.div`
 `
 
 export const FirstContainerImage = styled.img`
-  width: 40%;
+  width: 5em;
 `;
 
 export const SecondContainer = styled.div`
@@ -197,7 +259,7 @@ export const BaseStatsContentValueTotal = styled.div`
 
 export const BaseStatsName = styled.p`
   font-family: "Poppins";
-  font-size: 0.85em;
+  font-size: 0.7em;
   
 
   @media screen and (min-width: 280px) and (max-width: 450px) {
@@ -211,7 +273,7 @@ export const BaseStatsName = styled.p`
 
 export const BaseStatsValue = styled.p`
   font-family: "Poppins";
-  font-size: 0.8em;
+  font-size: 0.7em;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
     font-size:.5em;
@@ -228,13 +290,13 @@ export const BaseStatsValueTotal =  styled.p`
 
 export const LineBaseStats = styled.hr`
   height: .1vh;
-  background-color: #807f7f;
+  background-color: #a3a2a2d1;
   width: 100%;
-  margin: .2em 0;
+  margin: .25em 0;
 `
 
 export const ThirstContainer = styled.div`
-  width: calc(100% - 75%);
+  width: 30%;
   display: flex;
   flex-direction: column;
   gap: 0.3em;
@@ -245,7 +307,7 @@ export const ThirstContainer = styled.div`
 `;
 
 export const PokemonId = styled.p`
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 100;
   font-family: "Inter", sans-serif;
 
@@ -259,7 +321,7 @@ export const PokemonId = styled.p`
 `;
 
 export const PokemonName = styled.h2`
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-family: "Inter", sans-serif;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
@@ -281,7 +343,7 @@ export const TypesPokemon = styled.span`
 `;
 
 export const TypeImage = styled.img`
-  width: 6.5vw;
+  width: 4.5vw;
 
   @media screen and (min-width: 2000px) {
     width: 3.5vw;
@@ -305,7 +367,7 @@ export const MovesTitle = styled.h3`
   font-family: "Poppins";
   color: #000;
   font-weight: 700;
-  font-size: 1.3em;
+  font-size: 1em;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
     font-size: .7em;
@@ -321,7 +383,7 @@ export const MovesContainer = styled.div`
   align-items:center;
   height: 4vh;
   background-color: #ececec;
-  width: 12vw;
+  width: 9em;
   margin: 0.8em 0;
   padding:.5em;
   border-radius: 20px;
@@ -335,6 +397,7 @@ export const MovesContainer = styled.div`
 export const MovesText = styled.p`
   font-family: "Poppins";
   color: #000;
+  font-size:.7em;
 
   @media screen and (min-width: 280px) and (max-width: 450px){
     font-size: .5em;
@@ -355,7 +418,7 @@ export const FourthContainer = styled.div`
 export const ImagePokemon = styled.img`
   position: absolute;
   top: -100px;
-  width: 20em;
+  width: 11em;
 
   @media screen and (min-width: 2000px) {
     width: 8vw;

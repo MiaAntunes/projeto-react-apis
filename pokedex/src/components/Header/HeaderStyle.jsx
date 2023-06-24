@@ -15,10 +15,11 @@ export const ButtonListPokemon = styled.button`
   background: transparent;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 1em;
+  font-size: .85em;
   text-decoration-line: underline;
   position: absolute;
   left: 5%;
+  width:8vw;
   
   
   @media screen and (min-width: 280px) and (max-width: 450px){
