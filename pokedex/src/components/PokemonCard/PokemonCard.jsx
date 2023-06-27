@@ -61,7 +61,6 @@ export const PokemonCard = (props) => {
               >
                 Capturar!
               </Button>
-              // <Modal/>
               :
               <Button
               backgroundColor="#FF6262"
