@@ -1,6 +1,5 @@
 import { Header } from "../../components/Header/Header";
 import { PokemonCard } from "../../components/PokemonCard/PokemonCard";
-import { Footer } from "../../components/Footer/Footer";
 import { MainContainer, Title, SectionPokemon } from "./PokemonListPageStyle";
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
@@ -44,7 +43,6 @@ export const PokemonListPage = () => {
           })}
         </SectionPokemon>
       </MainContainer>
-      <Footer />
     </>
   );
 };

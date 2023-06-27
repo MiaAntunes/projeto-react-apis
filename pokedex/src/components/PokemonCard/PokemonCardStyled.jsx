@@ -240,49 +240,49 @@ export const PokemonName = styled.h2`
 `
 
 export const TypesPokemon = styled.span`
-    width: 10vw;
+    width: 2.5em;
     display: flex;
     gap: 0 0.5em;
 
   
   @media screen and (min-width: 450px) and (max-width: 600px){
-    width: 8vw;
+    width: 2.6em;
   }  
 
   @media screen and (min-width: 601px) and (max-width: 800px){
-    width: 6.5vw;
+    width: 2.8em;
   }
   
   @media screen and (min-width: 801px) and (max-width: 1000px){
-    width: 5.5vw;
+    width: 2.8em;
   }
   
   @media screen and (min-width: 1001px) and (max-width: 1200px){
-    width: 4.5vw;
+    width: 2.8em;
   }
   
   @media screen and (min-width: 1201px) and (max-width: 1400px){
-    width: 4.5vw;
+    width: 2.8em;
   }
   
   @media screen and (min-width: 1401px) and (max-width: 1600px){
-    width: 4vw;
+    width: 2.8em;
   }
   
   @media screen and (min-width: 1800px) and (max-width: 2000px){
-    width: 3.5vw;
+    width: 3em;
   }
   
   @media screen and (min-width: 2001px) and (max-width: 2500px){
-    width: 3.3vw;
+    width: 4em;
   }
   
   @media screen and (min-width: 2501px) and (max-width: 3000px){
-    width: 3vw;
+    width: 4em;
   }
   
   @media screen and (min-width: 3000px) {
-    width: 3vw;
+    width: 5em;
   }
 `
 
@@ -379,12 +379,12 @@ export const ImagePokemon = styled.img`
   }
   
   @media screen and (min-width: 2501px) and (max-width: 3000px){
-    width: calc(100% - 60%);
+    width: calc(100% - 50%);
     bottom: calc(100% - 40%);
   }
   
   @media screen and (min-width: 3000px) {
-    width: calc(100% - 60%);
+    width: calc(100% - 50%);
     bottom: calc(100% - 35%);
   }
 `
