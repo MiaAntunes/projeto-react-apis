@@ -84,7 +84,7 @@ export const ArticleContainer = styled.article`
     min-height: calc(100vh - 73vh);
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     width: 20vw;
     min-height: calc(100vh - 73vh);
   }
@@ -136,7 +136,7 @@ export const FirstContainer = styled.div`
     padding: 1em ;
   }
   
-  @media screen and (min-width: 1700px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     padding: 1.5em ;
   }
   
@@ -179,7 +179,7 @@ export const PokemonId = styled.p`
     font-size: 0.8em;
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     font-size: 0.95em;
   }
   
@@ -222,7 +222,7 @@ export const PokemonName = styled.h2`
     font-size: 1.2em;
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     font-size: 1.4em;
   }
   
@@ -269,7 +269,7 @@ export const TypesPokemon = styled.span`
     width: 2.8em;
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     width: 3em;
   }
   
@@ -310,7 +310,7 @@ export const LinkFromDetail = styled.a`
     font-size: 0.8em; 
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     font-size: 0.95em; 
   }
   
@@ -368,7 +368,7 @@ export const ImagePokemon = styled.img`
     bottom: calc(100% - 38%);
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     width: calc(100% - 43%);
     bottom: calc(100% - 35%);
   }
@@ -434,7 +434,7 @@ export const Button = styled.button`
     min-height: calc(100% - 82%);
   }
   
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     width: 5.5vw;
     min-height: calc(100% - 85%);
     font-size: .8em;

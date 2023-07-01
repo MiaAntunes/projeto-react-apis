@@ -43,7 +43,7 @@ export const Title = styled.h1`
     padding: 1em;
   }
 
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     font-size: 1.9em;
     padding: 1.5em;
   }
@@ -101,7 +101,7 @@ export const SectionPokemon = styled.section`
     margin: .7em 0;
   }
 
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     gap: 3.5em 1.8em;
     margin: .7em 0;
   }

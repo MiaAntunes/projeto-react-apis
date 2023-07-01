@@ -55,7 +55,7 @@ font-family: "Poppins";
     padding: 1em;
   }
 
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px){
     font-size: 1.9em;
     padding: 1.5em;
   }
@@ -149,7 +149,7 @@ export const SectionPokemon = styled.section`
 
   }
 
-  @media screen and (min-width: 1800px) and (max-width: 2000px){
+  @media screen and (min-width: 1601px) and (max-width: 2000px)
   height: 65vh;
   }
 
